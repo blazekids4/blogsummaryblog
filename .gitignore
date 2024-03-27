@@ -19,3 +19,6 @@ ENV/
 
 # Ignore environment variables
 .env
+
+notes.md
+

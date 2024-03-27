@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-sum-blog-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blog-sum-blog-backend
+  template:
+    metadata:
+      labels:
+        app: blog-sum-blog-backend
+    spec:
+      containers:
+      - name: blog-sum-blog-backend
+        image: vidbot.azurecr.io/blog-sum-blog-backend:latest
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred
