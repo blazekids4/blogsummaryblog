@@ -1,0 +1,21 @@
+# .gitignore
+
+# Ignore Python build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*~
+
+# Ignore Python virtual environments
+venv/
+ENV/
+
+# Ignore Jupyter Notebook files
+.ipynb_checkpoints
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore environment variables
+.env
