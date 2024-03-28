@@ -52,7 +52,7 @@ This project consists of a Python backend and a React frontend. Here are the ste
 
 ### Backend
 
-1. Ensure you have Python 3.8 or later installed. You can check your Python version by running `python --version` in your terminal.
+1. Ensure you have Python 3.9 or later installed. You can check your Python version by running `python --version` in your terminal.
 
 2. Clone the repository to your local machine.
 
