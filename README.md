@@ -62,7 +62,7 @@ This project consists of a Python backend and a React frontend. Here are the ste
 
     ```sh
     python -m venv venv
-    source venv/bin/activate  # On Windows, use [`venv\Scripts\activate`](command:_github.copilot.openRelativePath?%5B%22venv%2FScripts%2Factivate%22%5D "venv\Scripts\activate")
+    source venv/bin/activate  # On Windows, use [`venv\Scripts\activate`]
     ```
 
 5. Install the Python dependencies with pip:
