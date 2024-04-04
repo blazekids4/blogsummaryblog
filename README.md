@@ -22,6 +22,12 @@ This project is perfect for anyone who wants to quickly get the gist of multiple
 
 This project uses a technique called "Chain of Density Prompting" for generating concise and information-dense summaries of blog articles. This technique is implemented in the Python backend, specifically in the *chain_of_density_summarization* function in the **cod-article-7days.py** file.
 
+The chunk_content function splits the content of the blog article into 'n' parts, with 'n' defaulting to 5 if not provided. This means that, by default, **the content will be divided into 5 chunks, regardless of the length of the article**. 
+    
+However, keep in mind that each chunk will be of different sizes if the article is short or very long. In other words, a longer article will result in larger chunks, while a shorter article will result in smaller chunks.
+
+
+
 ### What is Chain of Density Prompting?
 
 Chain of Density Prompting is a summarization technique that involves generating a series of increasingly dense summaries. The process starts with a long, non-specific summary and then iteratively refines it to make it denser and more informative.
