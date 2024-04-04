@@ -26,8 +26,6 @@ The chunk_content function splits the content of the blog article into 'n' parts
     
 However, keep in mind that each chunk will be of different sizes if the article is short or very long. In other words, a longer article will result in larger chunks, while a shorter article will result in smaller chunks.
 
-
-
 ### What is Chain of Density Prompting?
 
 Chain of Density Prompting is a summarization technique that involves generating a series of increasingly dense summaries. The process starts with a long, non-specific summary and then iteratively refines it to make it denser and more informative.
@@ -45,6 +43,22 @@ The *render_density_prompt* function is used to generate the prompts for the Ope
 The *summarize_with_gpt* function is used to generate the summaries. It sends the prompts to the OpenAI GPT-35-Turbo (or GPT-4) model and returns the generated summaries.
 
 The *chain_of_density_summarization* function returns the last summary in the series, which is the densest and most informative.
+
+### The Chain of Density Code
+
+In the provided Python script, the chunk size is determined by the chunk_content function. This function splits the content into 'n' parts, where 'n' is an argument that defaults to 5 if not provided.
+
+Here's how it works:
+
+1. The content is split into individual words.
+
+2. The number of words in each chunk (chunk size) is calculated by dividing the total number of words by 'n'. It ensures that chunk_size is at least 1, even when the content is shorter than 'n', to avoid zero division.
+
+3. The function then creates the chunks: it groups the words into blocks, each containing approximately chunk_size words.
+
+However, there isn't a defined maximum chunk size in the script. Instead, the size of each chunk is determined dynamically based on the total word count of the content and the 'n' value. This means that the chunk size can vary depending on the length of the content.
+
+Also, it's worth noting that when the chunks are used in the chain_of_density_summarization function, the GPT model's summary generation is limited by the token_count parameter (default value is 500). This could indirectly impose a limit on the chunk size since larger chunks might result in summaries that exceed this token limit.
 
 ### Usage
 
